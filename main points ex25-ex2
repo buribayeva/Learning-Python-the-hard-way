@@ -1,0 +1,13 @@
+split () --function will break up words for us
+sorted ()--function to sort the words
+pop()    --function to popping off the word ; pop(0)-the first word; pop(-1)---the last word in the list
+hairs = ['brown', 'blond', 'red']
+eyes = ['brown', 'blue', 'green']
+weights = [1, 2, 3, 4]
+
+if fmkmfkr : elif :ififmvi else:
+--elements = [] --- empty list
+--for i in range(0, 6): --- loop with the range
+--elements.append(i)---appending the %d into the empty list
+--range(start, stop, increment)
+--repeat ex34

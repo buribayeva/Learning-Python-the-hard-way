@@ -1,0 +1,156 @@
+print '' ""    ---printing 
+#     - *- coding: utf- 8 - *-    #ASCII encoding
+#     - “octothorpe” is also called a “pound,” “hash,” “mesh, comments in python
++ plus
+- minus
+/ slash
+* asterisk
+% percent ,modulus
+< less- than
+> greater- than
+<= less- than- equal
+>= greater- than- equal
+
+round()
+Format strings:
+Python’s str.format() method of the string class allows you to do variable substitutions and value formatting.
+• %d- displaying variables to users : %d - Signed integer decimal.
+• %i--Signed integer decimal.
+• %o--Octal format. Outputs the number in base 8.
+• %u--unsigned decimal integer
+• %x-- Hex format. Outputs the number in base 16, using lower- case letters for the digits above 9.
+• %X -- Hex format. Outputs the number in base 16, using upper- case letters for the digits above 9.
+• %e--Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6.
+• %E --Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character.
+• %f --Floating point numbers;  	Fixed point. Displays the number as a fixed-point number. The default precision is 6.
+• %F--- Fixed point. Same as 'f', but converts nan to NAN and inf to INF.
+• %g--General format. For a given precision p >= 1, this rounds the number to p significant digits and then formats the result in either fixed-point format or in scientific notation, depending on its magnitude.
+
+The precise rules are as follows: suppose that the result formatted with presentation type 'e' and precision p-1 would have exponent exp. Then if -4 <= exp < p, the number is formatted with presentation type 'f' and precision p-1-exp. Otherwise, the number is formatted with presentation type 'e' and precision p-1. In both cases insignificant trailing zeros are removed from the significand, and the decimal point is also removed if there are no remaining digits following it.
+
+Positive and negative infinity, positive and negative zero, and nans, are formatted as inf, -inf, 0, -0 and nan respectively, regardless of the precision.
+
+A precision of 0 is treated as equivalent to a precision of 1. The default precision is 6.
+• %G--General format. Same as 'g' except switches to 'E' if the number gets too large. The representations of infinity and NaN are uppercased, too.
+• %c
+• %r -is the best for debugging, since it displays the "raw" data of the variable, also known as the "representation".
+• %s- displaying ;String (or any object with a string representation, like numbers)
+ %n-- 	Number. This is the same as 'd', except that it uses the current locale setting to insert the appropriate number separator characters.
+• %% --Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign.
+% -- 	The same as 'd'.
+%b --Binary format. Outputs the number in base 2.
+%c-- Character. Converts the integer to the corresponding unicode character before printing.
+
+target.write('{}\n{}\n{}\n'.format(line1,line2,line3))
+
+\n ---starying with new line
+print """
+nmvfibob
+bngibngi
+"""
+
+Escape What it does.
+\\ Backslash (\)
+\' Single- quote (')
+\" Double- quote (")
+\a ASCII bell (BEL)
+\b ASCII backspace (BS)
+\f ASCII formfeed (FF)
+\n ASCII linefeed (LF)
+\N{name} Character named name in the Unicode database (Unicode only)
+\r ASCII carriage return (CR)
+\t ASCII horizontal tab (TAB)
+\uxxxx Character with 16- bit hex value xxxx (Unicode only)
+\Uxxxxxxxx Character with 32- bit hex value xxxxxxxx (Unicode only)
+\v ASCII vertical tab (VT)
+\ooo Character with octal value oo
+\xhh Character with hex value hh
+
+
+%r format none of the escape sequences work.
+
+raw_input()
+
+int(raw_input()), which gets the number as a string from
+raw_input() then converts it to an integer using int().Remember int(raw_input())? The problem with that is then you can’t enter fl oating point, so
+also try using float(raw_input()) instead.
+
+input()
+
+What’s the difference between input() and raw_input()?
+The input() function will try to convert things you enter as if they were Python code, but it has
+security problems so you should avoid it.
+
+pydoc
+
+from sys import argv
+The argv is the “argument variable,” a very standard name in programming that you will fi nd
+used in many other languages. This variable holds the arguments you pass to your Python script
+when you run it.sys is a package, and this phrase just says to get the argv feature
+from that package
+
+sys-- modules , also know as library
+script, first, second, third = argv --unpacking
+
+prompt = '> '
+computer = raw_input(prompt)
+
+open()
+read()
+truncate ()—Empties the fi le. Watch out if you care about the fi le.
+write()
+readline() ---Reads just one line of a text fi le. readline( 2, file)
+close()
+indata = open(from_file).read(), which means you
+don’t need to then do in_file.close() when you reach the end of the script. It should already
+be closed by Python once that one line runs.
+seek() --you can “seek” this read head around the fi le to positions, then work with it there. Each time you do f.seek(0), you’re moving to the start of the fi le. Each time you do
+
+f.readline(), you’re reading a line from the fi le and moving the read head to right after the
+\n that ends that fi le. readline() is code that scans each byte of the fi le until it fi nds a \n character, then stops
+reading the fi le to return what it found so far. The fi le f is responsible for maintaining the current
+position in the fi le after each readline() call, so that it will keep reading each line.
+
+
+return
+
++=  ---means x = x + y is the same as x += y.
+
+target = open(filename, 'w+')
+the + modifi er, so you can do 'w+', 'r+', and 'a+'.
+This will open the fi le in both read and write mode and, depending on the character used, posi-
+tion the fi le in different ways.
+
+
+from os.path import exists ---This
+returns True if a fi le exists, based on its name in a string as an argument. It returns False if not.
+print "Does the output file exist? %r" % exists(to_file)
+
+
+cat test.txt---“concatenates” fi les together, but mostly it’s just an easy way to print a fi le to the screen.
+Type man cat to read about it.
+
+Functions: def for “defi ne.”
+
+*args (asterisk args), which is a lot like your argv parameter but
+for functions. This has to go inside () parentheses to work.take all the arguments to the function and then put them in args as a list.
+def print_two(*args):
+
+
+Function checklist:
+1. Did you start your function defi nition with def?
+2. Does your function name have only characters and _ (underscore) characters?
+3. Did you put an open parenthesis ( right after the function name?
+4. Did you put your arguments after the parenthesis ( separated by commas?
+5. Did you make each argument unique (meaning no duplicated names)?
+6. Did you put a close parenthesis and a colon ): after the arguments?
+7. Did you indent all lines of code you want in the function four spaces? No more, no less.
+8. Did you “end” your function by going back to writing with no indent (dedenting we call it)?
+And when you run (“use” or “call”) a function, check these things:
+1. Did you call/use/run this function by typing its name?
+2. Did you put the ( character after the name to run it?
+3. Did you put the values you want into the parenthesis separated by commas?
+4. Did you end the function call with a ) character?
+arg1, arg2 = args
+
+def print_two_again(arg1, arg2):
